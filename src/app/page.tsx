@@ -1,23 +1,4 @@
-const LINKS = [
-  {
-    emoji: "🐙",
-    title: "Github",
-    address: "https://github.com/kanghoseong",
-    href: "https://github.com/kanghoseong",
-  },
-  {
-    emoji: "📝",
-    title: "Blog",
-    address: "https://shallowbutwide.tistory.com/",
-    href: "https://shallowbutwide.tistory.com/",
-  },
-  {
-    emoji: "✉️",
-    title: "Email",
-    address: "hskang@gmail.com",
-    href: "mailto:hskang@gmail.com",
-  },
-];
+import LinkList from "@/components/LinkList";
 
 export default function Home() {
   return (
@@ -38,18 +19,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex w-full flex-col gap-4">
-          {LINKS.map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className="flex h-14 w-full items-center justify-center gap-2 rounded-2xl border border-white/60 bg-white/40 text-sm font-medium text-stone-700 shadow-sm backdrop-blur-md transition-colors duration-200 hover:bg-white/60 dark:border-white/10 dark:bg-white/[0.06] dark:text-stone-100 dark:hover:bg-white/[0.1]"
-            >
-              <span>{link.emoji}</span>
-              <span>{link.title}</span>
-            </a>
-          ))}
-        </div>
+        <LinkList />
       </div>
     </div>
   );
